@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <title>CataCart |</title>
+	<!-- Bootstrap CSS -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>    
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">	
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+	<script defer src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>	
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>    
+	<link href="../static/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+    <header>
+	    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Cata<i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!--
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Categories</a>
+                </li>
+                -->
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Categories
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">All Categories</a>
+                    </div>
+                </li>
+
+
+                </ul>
+                
+            </div>
+        </nav>
+
+	</header>
+	<h3 class="h3">Profile & API Help</h3>
+
+
+<div class="row">
+    
+    
+  <div class="col-4">
+    <div class="list-group" id="list-tab" role="tablist">
+      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
+      <!-- <a class="list-group-item list-group-item-action" id="list-apikey-list" data-toggle="list" href="#list-apikey" role="tab" aria-controls="apikey">API Key</a> -->
+      <a class="list-group-item list-group-item-action" id="list-usage-list" data-toggle="list" href="#list-usage" role="tab" aria-controls="usage">API Usage</a>
+      <!-- <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a> -->
+    </div>
+  </div>
+
+  <div class="col-8">
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+        <p>User Name <b>1</b></p>
+        <p>Email <b>2</b></p>
+        <p>Join Date <b>3</b></p>
+      </div>
+      
+      <div class="tab-pane fade" id="list-usage" role="tabpanel" aria-labelledby="list-usage-list">
+        <p>
+            <b>Get All Products end point</b>
+            <pre>http://localhost:5000/products/json</pre>
+            <strong>Success</strong> - returns the json of all the products added by you<br>
+            <strong>Failure</strong> - json with no products<br>
+        </p>
+        <hr>
+        <p>
+            <b>Get Single Product end point</b>
+            <pre>http://localhost:5000/product/&lt;Product-Id&gt;/json</pre>
+            <strong>Example</strong> - <code>http://localhost:5000/product/1/json</code><br>
+            <strong>Success</strong> - returns the json of the product<br>
+            <strong>Failure</strong> - json with no products<br>
+        </p>
+        <hr>
+        <p>
+            <b>Get All Categories end point</b>
+            <pre>http://localhost:5000/categories/json</pre>
+            <strong>Success</strong> - returns the json of all the categories added by you<br>
+            <strong>Failure</strong> - json with no categories<br>
+        </p>
+        <hr>
+        <p>
+            <b>Get Single Category end point</b>
+            <pre>http://localhost:5000/category/&lt;Category-Id&gt;/json</pre>
+            <strong>Example</strong> - <code>http://localhost:5000/category/1/json</code><br>
+            <strong>Success</strong> - returns the json of the category<br>
+            <strong>Failure</strong> - json with no products<br>
+        </p>
+      </div>
+      <!--<div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>-->
+    </div>
+  </div>
+
+
+
+</div>
+<hr>
+
+</div>
+<script>
+
+</script>
+</body>
+</html>
