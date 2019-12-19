@@ -54,7 +54,7 @@ chmod 644 .ssh/authorized_keys
  Changed the SSh port from ### 22 to 2200
  `sudo nano /etc/ssh/sshd_config`
  using the sshd_config file i changed the port 22 to 2200
- `sudo service ssh restart`
+ `sudo /etc/init.d/ssh restart`
  
 5. Configure the Uncomplicated Firewall (UFW) to only allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123).
 
@@ -74,7 +74,7 @@ using the above commands i could easily configure the Uncomplicated Firewall (UF
 Installing Apache
 `sudo apt-get install apache2`
 Testing Apache using the IP address shows the default Apache homepage.
-http://13.127.73.63/ or http://ec2-13-127-73-63.ap-south-1.compute.amazonaws.com
+http://13.232.207.238/ or http://ec2-13-232-207-238.ap-south-1.compute.amazonaws.com
 
 #### Install python3 and  configure mod_wsgi package
 The server had inbuilt python2.7 and had to install python3 and pip3
@@ -121,13 +121,13 @@ Changed the **OAuth 2.0 client ID** from  console.developers.google.com
 # Website Urls
 
 ### Home Page
-http://ec2-13-127-73-63.ap-south-1.compute.amazonaws.com/catalog/
+http://ec2-13-232-207-238.ap-south-1.compute.amazonaws.com/catalog/
 
 ### Json Endpoints
-http://ec2-13-127-73-63.ap-south-1.compute.amazonaws.com/catalog/products/json
-http://ec2-13-127-73-63.ap-south-1.compute.amazonaws.com/catalog/product/1/json
-http://ec2-13-127-73-63.ap-south-1.compute.amazonaws.com/catalog/categories/json
-http://ec2-13-127-73-63.ap-south-1.compute.amazonaws.com/catalog/category/1/json
+http://ec2-13-232-207-238.ap-south-1.compute.amazonaws.com/catalog/products/json
+http://ec2-13-232-207-238.ap-south-1.compute.amazonaws.com/catalog/product/1/json
+http://ec2-13-232-207-238.ap-south-1.compute.amazonaws.com/catalog/categories/json
+http://ec2-13-232-207-238.ap-south-1.compute.amazonaws.com/catalog/category/1/json
     
 Thankyou
 Vinay Kumar Rajan
