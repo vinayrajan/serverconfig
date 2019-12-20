@@ -12,27 +12,27 @@ Linux Server Configuration is a project in the Full Stack Web Developer Nanodegr
  - Codename:       xenial
 
 ### Server Info
-1. Start a new Ubuntu Linux server instance on [Amazon Lightsail](https://lightsail.aws.amazon.com). There are full details on setting up your Lightsail instance on the next page
+Start a new Ubuntu Linux server instance on [Amazon Lightsail](https://lightsail.aws.amazon.com). There are full details on setting up your Lightsail instance on the next page
 
-Private IP: 172.26.12.254
-Public IP: **13.127.73.63**  
+
+Public IP: **52.66.199.100**  
 SSH port: 2200  
-Site URL: [http://13.127.73.63/catalog/](http://13.127.73.63/catalog/)
+Site URL: [http://ec2-52-66-199-100.ap-south-1.compute.amazonaws.com/catalog/](http://ec2-52-66-199-100.ap-south-1.compute.amazonaws.com/catalog/)
 Server Status: **Running**
 Git: https://github.com/vinayrajan/serverconfig
 
 # Linux Configuration
-2. Follow the instructions provided to SSH into your server.
+Follow the instructions provided to SSH into your server.
 Downloaded the default private key to the local machine and logged in successfully using putty
 
-3. Update all currently installed packages.
+Update all currently installed packages.
 Upgraded the system to get the latest security patches.
 `sudo apt-get update`
 `sudo apt-get upgrade`
 
-6. Create a new user account named `grader`.  
-7. Give `grader` the permission to `sudo`.  
-8. Create an SSH key pair for `grader` using the `ssh-keygen` tool.
+Create a new user account named `grader`.  
+Give `grader` the permission to `sudo`.  
+Create an SSH key pair for `grader` using the `ssh-keygen` tool.
 Create User named 
 Created a user called grader and added to **sudo users**
 ```sudo adduser grader```
@@ -50,7 +50,7 @@ change the access of the .ssh folder and contents within the folder
 chmod 700 .ssh
 chmod 644 .ssh/authorized_keys
 ```
-4. Change the SSH port from **22** to **2200**. Make sure to configure the Lightsail firewall to allow it.
+Change the SSH port from **22** to **2200**. Make sure to configure the Lightsail firewall to allow it.
  Changed the SSh port from ### 22 to 2200
  `
  sudo sed -i 's/Port 22/Port 2200/g' /etc/ssh/sshd_config
@@ -60,7 +60,7 @@ chmod 644 .ssh/authorized_keys
  using the sshd_config file i changed the port 22 to 2200
  `sudo /etc/init.d/ssh restart`
  
-5. Configure the Uncomplicated Firewall (UFW) to only allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123).
+Configure the Uncomplicated Firewall (UFW) to only allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123).
 
 ```
 sudo ufw allow 2200/tcp
@@ -101,8 +101,8 @@ Created a config on apache2 on `/etc/apache2/sites-enabled/catalog.conf` for the
 ```
 <VirtualHost *:80>
      # Add machine's IP address (use ifconfig command)
-     #ServerName 13.127.73.63
-     ServerName ec2-13-127-73-63.ap-south-1.compute.amazonaws.com
+     #ServerName 52.66.199.100
+     ServerName ec2-52-66-199-100.ap-south-1.compute.amazonaws.com
      # Give an alias to to start your website url with
      WSGIScriptAlias /catalog /home/ubuntu/ExampleFlask/my_flask_app.wsgi
      <Directory /home/ubuntu/ExampleFlask/>
