@@ -37,6 +37,11 @@ need to change the line that says
 **#Port 22** to **Port 2200**
 and save the file.
 `sudo service ssh restart` to update the changes 
+While you are in the sshd_config file change the line that says
+> #PermitRootLogin prohibit-password
+to
+> #PermitRootLogin no
+so that root login is prohibited
 
 
 #### New user called grader
