@@ -14,7 +14,7 @@ Linux Server Configuration is a project in the Full Stack Web Developer Nanodegr
 ### Server Info
 Start a new Ubuntu Linux server instance on [Amazon Lightsail](https://lightsail.aws.amazon.com). 
 
-Private IP: 172.31.4.201
+Private IP: 1**.**.*.**1
 Public IP: **52.15.135.223**  
 SSH port: 2200 
 Domain name: [ec2-52-15-135-223.us-east-2.compute.amazonaws.com](ec2-52-15-135-223.us-east-2.compute.amazonaws.com)
@@ -94,43 +94,16 @@ If this scenario works then we can precede further To login to 52.15.135.223 as 
 we need the following for loging
 
 #### grader_dev.key
------BEGIN RSA PRIVATE KEY-----
-Proc-Type: 4,ENCRYPTED
-DEK-Info: AES-128-CBC,D5CC33050198D30E606688D7A3A69275
+/*
+I have removed the rsa key as i have completed the nano degree
+*/
 
-Sr/FiPmDdV/fwUVQFvCbvkwj9h1fzBq6cJ8nZJDKnRprZ5LhacKRFhZPv0N8LXmw
-tKn5iBwv1HpXlGFrA5KxNUwtow7DgiVqrHIFsMj38ImhxtUv938jNR85WM4p8Xk3
-Vu8bLuY10HFWO7/E88jK7QHXn9WnpLwuDW3GayERZ2D7uJUzU6Txw3iztgaMPo0e
-uWZC3cf6kyPPw2TUcGTcdDT0akIBhCfrRYOK7Uw0HvdCGWWzqu1g34cCxa9LG5R4
-5KayeElGWzv/aIEnfQCqqInZtdcxQxvlxGl4ngnuGUEPg4jAKgu6qrbkCqLDvlao
-kyAhZzKmwwwYyB0fJp917lWE1mb8vdaxtay7bcDHp4bvEKrMSS6j6yWN58vUCoM6
-fHViSKj+BQaBBZaDGUzW8THGrfaRs8LRYMXl3y46/fSfUIDGaFdt75Q0e4bz2x6P
-4tLVfo9h5H3Yu848xTS+OqWt5DUOBC6jBqylbFVemOcQ1tJ6JaECbMueH+RwRqYa
-PzSCcpUEUrcnkkJsiRDYl+RuT5sK0/48AgRikqP6mVrnT8ZPX4Ee69SChh5GLVVW
-TJTQU43bIhSbUC/QK/MKlGU/93o6lWJQBS1RwK+wscKZ3EpAuygswWnGlSGnwrtl
-csYSygoso/PiqIPZoGS1YoBfnFd9ARWpNESpT5qM1oNOt5MPWD/tbJQYtcf6SqP1
-slEREkmqQXQBNQXybR731qFQE5K+hvWBgMOv1e15cFL3On4KRAq6w2ffSeYzcXFy
-L41jzh/FKhNn2hctxz+HFbrOak/0t68nP0zcw/YKfvozKehT45hTdW8fWOi8l04i
-whP26kOw2RHLZfahlEhZ0X+5J9bQ/Q0hAhlwKFZijPboJTLSjxk0uZjsKlJgT/y1
-T+TqrfpJKayQlW1wLKkY0E6DkwTu/ZVTwgtql1rToJtdVT7Qhx8xBXsThQohR1B3
-xJObds5JJcBXaxTW9tXVkUap7r92fSfwspVAc9OIn+8Uj73MBSgvmnwvTuOB2tZa
-0vQSPg9fO5sRGLpW1MmnS0DQ3/8a2GrJjfef09b+Q/c88oT7+vbMzYI7mgCdWEjT
-oyjd4ymtMVTIK8xd35N26hB66PvySkSvEGx0o5jPW7IQaJMnikU8mo0HdNCdd5DK
-9AAuw36lgQr9tZswG1kTkOfbYuwmYZQJHaqf85YfRdLHYRWC0Fea/bHTi1FBTzHw
-bAPMMps0Nk53Bp0QKdCyaFXBnfhldpWtx8ysk5aS4Sba+K2q7nbDberE1KCnKpiL
-5pyDhOvugRc/7X5eTH87GC7l3x1W+nlZJGEzxRDuICeauMhi0op5N7Y4qE1ts/6a
-HWZGDRBbYJwROewL6hN+4MR+Ja1+VWOImlmVUz7rqa0eMvMWs1wI3rxOGtLkuqfh
-7eOdfa236JmNLhoj6qTIu9jqJAfekCdafElB2PfwzF70+SXNWjTfjzoN6osmAXea
-EmccA1I1SzLzREx5pOWnx7LM3PVrby9hURq48S6W7Yccqt+wV4Yure55UIefptZk
-gm6no2dQfQsjWEGuJddCoYZsD7s9ZIghKt0xZjy2C6mWPIpRVr6gDTjqMPCiVZ8b
------END RSA PRIVATE KEY-----
-
- > grader_dev passphrase : **grader**
+ > grader_dev passphrase : ******
 
 `sudo ssh -i grader_dev.key grader@52.15.135.223 -p 2200`
 prompts for password, enter the pass phrase
 
->grader@ip-172-31-4-201:~$
+>grader@ip-172-**-*-**1:~$
 
 ## Configuring Web Server
 Installing Apache
